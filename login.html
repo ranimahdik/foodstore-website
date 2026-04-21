@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodStore Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: Poppins,Arial,sans-serif; background:linear-gradient(135deg, #ff5722 0%, #ffaf7b 100%); min-height:100vh;display:flex;align-items:center;justify-content:center;}
+    .container {background:#fff;padding:2.2em 2em 1.2em 2em;border-radius:17px;box-shadow:0 2px 12px #d76d7732;max-width:350px;width:100%;}
+    h2 {color: #ff5722; margin-bottom: 1.5em;}
+    .input-group {margin-bottom:1em;display:flex;flex-direction:column;}
+    .input-group label {margin-bottom:4px;font-weight:600;}
+    .input-group input {padding:0.7em;border:2px solid #eee;border-radius:8px;font-size:1em;}
+    .input-group input:focus {border-color:#ff5722;}
+    .btn {width:100%;padding:0.8em 0;background:#ff5722;color:#fff;border:none;border-radius:30px;font-size:1.1em;font-weight:700;cursor:pointer;transition:background .2s;box-shadow:0 2px 8px #d76d7722;}
+    .btn:hover {background: #ff5722;}
+    .msg {color:#ff5722;margin-bottom:1em;}
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Logins🔐</h2>
+  <form id="loginForm" autocomplete="off">
+    <div class="msg" id="login-msg"></div>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" required>
+    </div>
+    <button class="btn" type="submit">Sign In</button>
+    
+  </form>
+</div>
+<script>
+document.getElementById('loginForm').onsubmit = function(e){
+  e.preventDefault();
+  // Simulate login (frontend only)
+  document.getElementById('login-msg').textContent = "Login successful! (Content Page would appear.)";
+  this.reset();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logout Page</title>
+
+<style>
+
+/* 🌈 Background */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff8a00, #ff8a00);
+}
+
+/* 📦 Card Box */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+/* 📝 Heading */
+h2 {
+    color: #333;
+}
+
+/* 🔘 Button */
+.btn {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Welcome User 👋</h2>
+    <p>Click below to logout safely</p>
+
+    <button class="btn" onclick="logout()">Logout</button>
+</div>
+
+<script>
+function logout() {
+  alert("Logged out successfully!");
+  // window.location = "login.php";  // use this in project
+}
+</script>
+
+</body>
+</html>

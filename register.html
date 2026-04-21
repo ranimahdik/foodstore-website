@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodStore Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: Poppins,Arial,sans-serif; background: linear-gradient(135deg, #ff8a00 0%, #ff8a00 100%); min-height:100vh;display:flex;align-items:center;justify-content:center;}
+    .container {background:#fff;padding:2.2em 2em 1.2em 2em;border-radius:18px;box-shadow:0 2px 12px #0092ff30;max-width:350px;width:100%;}
+    h2 {color:#ff8a00;margin-bottom:1.5em;}
+    .input-group {margin-bottom:1em;display:flex;flex-direction:column;}
+    .input-group label {margin-bottom:4px;font-weight:600;}
+    .input-group input {padding:0.7em;border:2px solid #eee;border-radius:8px;font-size:1em;}
+    .input-group input:focus {border-color:#ff8a00;}
+    .btn {width:100%;padding:0.8em 0;background:#ff8a00;color:#fff;border:none;border-radius:30px;font-size:1.1em;font-weight:700;cursor:pointer;transition:background .2s;box-shadow:0 2px 10px #0080ff32;}
+    .btn:hover {background: #ff8a00;}
+    .msg {color:#16a085;margin-bottom:1em;}
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Register 📝</h2>
+  <form id="registerForm" autocomplete="off">
+    <div class="msg" id="reg-msg"></div>
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input id="username" required maxlength="20">
+    </div>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" required minlength="4">
+    </div>
+    <div class="input-group">
+      <label for="phone">Contact Number</label>
+      <input id="phone" type="tel" required pattern="^[0-9\-+ ]{8,16}$" maxlength="16" placeholder="e.g. 03123456789">
+    </div>
+    <button class="btn" type="submit">Sign Up</button>
+  </form>
+</div>
+<script>
+document.getElementById('registerForm').onsubmit = function(e){
+  e.preventDefault();
+  // Simulate storing user (frontend only). You can use localStorage if you want.
+  document.getElementById('reg-msg').textContent = "Registration successful! Please Login.";
+  this.reset();
+}
+</script>
+</body>
+</html>

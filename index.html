@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodStore - Modern Demo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="FoodStore Logo">
+        FoodStore
+      </div>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register </a></li>
+        <li><a href="content.html">Contact</a></li>
+        <li><a href="logout.html">Logout</a></li>
+        <li><button id="darkmode-toggle" title="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="slider">
+        <img src="assets/images/food1.jpg" class="active" alt="Delicious Pizza">
+        <img src="assets/images/food2.jpg" alt="Green Salad">
+        <img src="assets/images/food3.jpg" alt="Burger">
+        <button class="prev">&#60;</button>
+        <button class="next">&#62;</button>
+      </div>
+      <div class="hero-text">
+        <h1>Welcome to FoodStore</h1>
+        <p>Delicious, Fresh and Fast Food Delivery. Modern design, smooth experience.</p>
+        <a class="btn" href="#products">Shop Now</a>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2 class="section-title">Our Food Products</h2>
+      <div class="products-grid">
+        <!-- Product cards will render here -->
+      </div>
+    </section>
+
+    <section id="cart"></section>
+    <section id="wishlist"></section>
+  </main>
+
+  <footer style="text-align:center;padding:2rem 0;color: #888;">
+    &copy; 2026 FoodStore. All rights reserved.
+  </footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
